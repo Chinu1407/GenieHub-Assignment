@@ -1,0 +1,29 @@
+//ES6
+//1.Template Literal 
+//JavaScript Variable without using Template Literal
+var name = 'Charlie';
+console.log('Charlie is here'); 
+console.log('My name is '+ name); 
+ 
+//JavaScript with using Template Literal
+const name1 = 'Charlie';
+console.log('Charlie is here ');
+console.log(`My name is ${name1}`);
+
+//2.Arrow Function
+// Without Using Arrow Function
+var sum=function()
+{
+var a=14;
+var b= 7;
+return a+b;
+}
+console.log(sum());
+//With Using Arrow Function
+var sum= () =>
+{
+var a=14;
+var b= 7;
+return a+b;
+}
+console.log(sum());
