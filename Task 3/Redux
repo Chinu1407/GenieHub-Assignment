@@ -1,0 +1,37 @@
+// 1.Actions :- these will describe the type of action being performed
+export const increment = () => ({
+  type: 'INCREMENT'
+});
+
+export const decrement = () => ({
+  type: 'DECREMENT'
+});
+
+
+// 2.Reducer:- It specify how the application's state changes in response to actions.
+const initialState = {
+  count: 0
+};
+
+const counterReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case 'INCREMENT':
+      return { count: state.count + 1 };
+    case 'DECREMENT':
+      return { count: state.count - 1 };
+    default:
+      return state;
+  }
+};
+
+export default counterReducer;
+
+//3. Store :- It holds the complete state  of our application.
+import { createStore } from 'redux';
+import counterReducer from './reducer';
+
+const store = createStore(counterReducer);
+
+export default store;
+
+
