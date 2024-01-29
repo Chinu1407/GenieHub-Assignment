@@ -1,0 +1,9 @@
+
+function Welcome(props) {
+  return <h1>Hello, {props.name}!</h1>;
+}
+
+// Using the Welcome component with props
+const element = <Welcome name="Charlie" />;
+ReactDOM.render(element, document.getElementById('root'));
+// It will simply print Hello Charlie
