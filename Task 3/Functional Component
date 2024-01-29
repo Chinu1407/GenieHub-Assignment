@@ -1,0 +1,7 @@
+// Functional component
+function Greeting() {
+  return <h1>Hello, Functional Component!</h1>;
+}
+
+// Render component to the DOM
+ReactDOM.render(<Greeting />, document.getElementById('root'));
