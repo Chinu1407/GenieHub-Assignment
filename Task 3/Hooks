@@ -1,0 +1,42 @@
+//1.UseState Hooks:- allow functional Component to have state
+
+import React, { useState } from 'react';
+
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <button onClick={() => setCount(count + 1)}>Increment</button>
+    </div>
+  );
+}
+
+// Render component with state using useState
+ReactDOM.render(<Counter />, document.getElementById('root'));
+
+//2. useEffect Hook :- for side effect in functional component
+
+import React, { useState, useEffect } from 'react';
+
+function DataFetcher() {
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    // Simulating data fetching with a setTimeout
+    const fetchData = () => {
+      setTimeout(() => {
+        setData('Fetched Data');
+      }, 2000);
+    };
+
+    fetchData();
+  }, []); // The empty dependency array means this effect runs once after the initial render
+
+  return <p>Data: {data}</p>;
+}
+
+// Render component with useEffect for data fetching
+ReactDOM.render(<DataFetcher />, document.getElementById('root'));
+
