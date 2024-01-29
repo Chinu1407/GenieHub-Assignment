@@ -1,0 +1,9 @@
+// Class component
+class GreetingClass extends React.Component {
+  render() {
+    return <h1>Hello, Class Component!</h1>;
+  }
+}
+
+// Render component to the DOM
+ReactDOM.render(<GreetingClass />, document.getElementById('root'));
