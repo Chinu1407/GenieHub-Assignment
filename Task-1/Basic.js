@@ -39,7 +39,7 @@ console.log(greeting);
 
 // Object
 var person = {
-    name: "Alice",
+    name: "Charlie",
     age: 30,
     isStudent: true,
     greet: function() {
